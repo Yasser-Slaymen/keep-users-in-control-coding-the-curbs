@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100&display=swap');
+:root{
+    --lighter-blue:#524dd0;
+    --light-green: #00ffec;
+}
+body{
+    width:100vw;
+    height: 100vh;
+    border: 1em solid blue;
+}
+
+/* header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00C8FF;
+    
+}
+
+#logo__nav{
+    width: 130px;
+    height: 45px;
+    margin: .3em;
+}
+a{
+    font-family: 'Smooch Sans', sans-serif;
+    text-decoration-line: none;
+    margin: .3em;
+    color: black;
+}
+
+a:hover{
+    color: white;
+    cursor: pointer;
+}
+
+/* first section */
+#major__apart{
+    background-color: transparent;
+    width: 95vw;
+    margin: 1em auto;
+}
+
+.background__img{
+    background-image: url(/assets/car.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    height: 50vh;
+    border-radius: 1em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+     z-index: -2;
+     
+    
+    
+}
+
+.background__img::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+    background-color: rgb(0, 0, 0,.5);
+    z-index: -1; 
+}
+
+.background__img h1{
+    font-size: 2em;
+}
+.background__img p{
+    font-size: 1em;
+}
+
+
+
+
+
