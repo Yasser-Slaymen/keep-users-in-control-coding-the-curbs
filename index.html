@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <script defer src="/scripts/carousel.js"></script>
     <title>coding the curbs</title>
 </head>
 <body>
@@ -12,10 +13,10 @@
         <img id="logo__nav" src="/docs/CTC_Primary_Logo_Black.svg" alt="logo">
         <nav>
             <ul class="nav__baar">
-                <il><a href="">Services</a></il>
-                <il><a href="">Updates</a></il>
-                <il><a href="">Over Ons</a></il>
-                <il><a href="">Contact</a></il>
+                <il><a class="link__nav" href="">Services</a></il>
+                <il><a class="link__nav" href="">Updates</a></il>
+                <il><a class="link__nav" href="">Over Ons</a></il>
+                <il><a class="link__nav" href="">Contact</a></il>
             </ul>
         </nav>
     </header>
@@ -40,7 +41,7 @@
                 <article id="carousel__container">
     
                     <button class="carousel__btn carousel__btn--left">
-                        <img src="/assets/left-btn.svg" alt="links row">
+                        <img src="/assets/left-btn (2).svg" alt="links row">
     
                     </button>
     
@@ -49,25 +50,28 @@
                         <ul class="carousel">
 
                             <li class="slide current-slide">
-                                <img class="carousel__img" src="/assets/recreation.JPG" alt="cafe`">
-                                <a href=""></a>
+                                <article class="slide__imagText">
+                                     <img class="carousel__img" src="/assets/recreation.JPG" alt="cafe`">
+                                     <h3>Recreation</h3>
+                                     <a class="link__slides" href=""></a>
+                                </article>
                             </li>
 
                             <li class="slide">
                                 <img class="carousel__img" src="/assets/loading-bay.png" alt="loading-bay">
-                                <a href=""></a>
+                                <a href=""> laadperron</a>
                             </li>
 
                             <li class="slide">
                                 <img class="carousel__img" src="/assets/mobility-hubs.png" alt="mobility-hubs">
-                                <a href=""></a>
+                                <a href="">mobility hubs</a>
                             </li>
                         </ul>
     
                     </article>
     
                     <butten class="carousel__btn carousel__btn--right">
-                        <img src="/assets/right-btn.svg" alt="reight row">
+                        <img src="/assets/right-btn (2).svg" alt="reight row">
     
                     </butten>
     
@@ -84,7 +88,9 @@
         </section>
 
     </main>
-    <footer></footer>
+    <footer>
+       <section class="m"> </section>
+    </footer>
     
 </body>
 </html>
