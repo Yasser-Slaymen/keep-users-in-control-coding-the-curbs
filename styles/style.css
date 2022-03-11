@@ -9,8 +9,7 @@
     --light-green: #00ffec;
 }
 body{
-   max-width: 1241px;
-    height: 100vh;
+   max-width: 1350px;
     border: 1em solid blue;
     margin: 0 auto;
 }
@@ -45,8 +44,7 @@ header{
 #major__apart{
     position: relative;
     background-color: transparent;
-    /* width: 95vw; */
-    margin: 1em auto;
+   
 }
 
 .background__img{
@@ -181,11 +179,55 @@ header{
 .carousel__indicator.current-slide{
 	background-color: rgba(0,0,0,1);
 }
+/* tex onder de image */
+.slide__imagText{
+    position: relative;
+    width: 400px;
+    height: 300px;
 
-/* footer */
-footer{
-    margin-top: 10em;
-    margin: 0 auto;
 }
-/* images text */
+.link__slides{
+    position: absolute;
+    bottom: 2px;
+    right: .1px;
+    width: 100%;
+    background:rgba(0,0,0,.5);
+}
+.link__slides h2{
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+.link__slides h2:hover{
+    color: rgb(225, 226, 202);
+}
+
+/* details */
+.details{
+    width: 35%;
+    background-color:#A0B7D0 ;
+}
+
+.eerst__deel img{
+    margin: 0 auto;
+    width: 32vw;
+    height: 43vh;
+    object-fit: cover;
+    object-position: center;
+    padding: 1em;
+    border-radius:2em;
+    
+}
+
+.details h3{
+    margin: 0 auto;
+    font-size:1.5em;
+    padding: 1em;
+}
+
+details p{
+    margin: 0 auto;
+    font-size: 1.em;
+    padding: 1em;
+}
 
