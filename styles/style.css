@@ -5,8 +5,16 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100&display=swap');
 :root{
-    --lighter-blue:#524dd0;
-    --light-green: #00ffec;
+  --lighter-blue:#524dd0;
+  --light-green: #00ffec;
+  --dark-blue: #110f2a ;
+  --gradient: linear-gradient(to right, #524dd0, #84389e);
+  --white: #fff;
+  --black: #000;
+  --text-color: #110f2a ;
+  --cta-color: linear-gradient(to right, #524dd0, #84389e);
+  --background-blue: 17, 15, 42;
+  --selection: #84389e;
 }
 body{
    max-width: 1350px;
@@ -17,10 +25,12 @@ body{
 
 /* header */
 header{
+    position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #00C8FF;
+    background-color: var(--lighter-blue);
+    z-index: 9999999;
     
 }
 
@@ -28,16 +38,17 @@ header{
     width: 138px;
     height: 45px;
     margin: .3em;
+    
 }
 .link__nav{
     font-family: 'Smooch Sans', sans-serif;
     text-decoration-line: none;
+    color: white;
     margin: .3em;
-    color: black;
 }
 
 .link__nav:hover{
-    color: white;
+    color: black;
     cursor: pointer;
 }
 
@@ -55,7 +66,6 @@ header{
     object-fit: cover;
     background-position: center;
     height: 55vh;
-    border-radius: 1em;
     color: white;
     display: flex;
     flex-direction: column;
@@ -79,9 +89,11 @@ header{
 
 .background__img h1{
     font-size: 2em;
+    margin: .5em;
 }
 .background__img p{
-    font-size: 1em;
+    font-size: 1.2em;
+    margin-top: .5em;
 
 }
 
@@ -89,7 +101,7 @@ header{
 .carousel__section{
     position: absolute;
     top: 50%;
-    right:31%;
+    right:32.5%;
     z-index: 9999;
 }
 #carousel__container{
@@ -239,3 +251,80 @@ header{
     padding: 1.5em;
 }
 
+/* footer */
+footer{
+    background-color: var(--dark-blue);
+}
+
+#footer__navigition{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+    margin: 0 1em;
+}
+.footer__nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer__nav il{
+    margin: .5em;
+    color: var(--white);
+}
+.footer__nav il >a{
+    font-size: 1.2em;
+    color: var(--white);
+
+}
+
+.footer__nav il >a:hover{
+    color: var(--light-green);
+}
+
+.footer__pramarylogos{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.footer__pramarylogos img{
+    margin: .5em;
+}
+
+.footer__btn{
+    width:152px;
+    height: 45px;
+    border: none;
+    border-radius: .2em;
+    background-color: var(--light-green);
+    cursor: pointer;
+}
+.footer__btn:hover{
+    transform: translateY(.2em);
+    background-color: rgb(186, 243, 243);
+}
+
+.footer__btn a{
+   font-size: 1.2em;
+   text-decoration: none;
+}
+.footer__privacy{
+    margin-left:30%;
+   color: #fff;
+   font-size: 1.2em;
+  
+}
+.footer__privacy p{
+    padding: .5em;
+}
+
+.footer__privacy p a{
+    color: var(--white);
+}
+
+.footer__privacy p a:hover{
+    color: gold;
+} 
