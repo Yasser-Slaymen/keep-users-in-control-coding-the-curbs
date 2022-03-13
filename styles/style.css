@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
 }
-@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100&display=swap');
+
 :root{
   --lighter-blue:#524dd0;
   --light-green: #00ffec;
@@ -20,7 +20,9 @@ body{
    max-width: 1350px;
     border: 1em solid blue;
     margin: 0 auto;
+    padding: 0;
     background-color: #FDF6FF;
+    font-family:Rajdhani;
 }
 
 /* header */
@@ -33,6 +35,10 @@ header{
     z-index: 9999999;
     
 }
+/* togel-mobile */
+.toggle__button{
+    display: none;
+}
 
 #logo__nav{
     width: 138px;
@@ -40,6 +46,7 @@ header{
     margin: .3em;
     
 }
+
 .link__nav{
     font-family: 'Smooch Sans', sans-serif;
     text-decoration-line: none;
@@ -328,3 +335,127 @@ footer{
 .footer__privacy p a:hover{
     color: gold;
 } 
+
+/* Mobile */
+
+@media (max-width:40em){
+    #logo__nav{
+        width: 86px;
+        height: 34px;
+        margin: .3em;
+        
+    }
+    /* toggel_baar */
+.toggle__button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.toggle__button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+/* End_toggel */
+
+
+    .nav__baar{
+        position: absolute;
+        top:2.8em;
+        right:.1em;
+        display:none;
+        flex-direction: column;
+        justify-content:space-around;
+        align-items: flex-start;
+        width: 12em;
+        height:150px;
+        background-color: rgb(248, 245, 245);
+    }
+
+    nav>ul.active{
+        display: flex;
+        /* opacity: 1; */
+    }
+
+    .link__nav{
+        font-size: 1em;
+        color: #000;
+        padding: 1em;
+    }
+
+    /* carousel */
+
+    .carousel__section{
+        top: 66%;
+        right: 16%;
+
+    }
+    #carousel__container{
+        width: 250px;
+        height: 200px;
+    }
+    .carousel__img{
+        width: 250px;
+        height: 200px;
+    }
+    .slide__imagText{
+        width:250px;
+        height: 200px;
+    }
+    .carousel__nav{
+        width:100%;
+    }
+
+   /* deel2 */
+   .details{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       margin-top: 5em;
+   }
+
+   .Eerst__Deel, .Twede__Deel{
+       width: 100%;
+   }
+   /* footer */
+   footer{
+       position: relative;
+       height:49vh;
+   }
+   #footer__navigition{
+      display: flex;
+      flex-direction: column;
+   }
+   .footer__nav{
+       margin: .1em;
+   }
+   .footer__pramarylogos{
+       display: flex;
+       flex-direction: row;
+       padding: .2em;
+   }
+   .footer__pramarylogos img{
+       margin:.2em;
+   }
+
+   .footer__btn{
+       width: 150px;
+       height:40px ;
+       padding: 1em;
+       margin: .5em;
+   }
+   .footer__privacy{
+       position: absolute;
+       top:80%;
+       font-size: 1em;
+      margin: 0 auto;
+       text-align: center;
+   }
+}
