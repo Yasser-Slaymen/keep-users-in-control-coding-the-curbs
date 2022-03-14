@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/formulier.css">
     <title>Document</title>
@@ -33,48 +34,106 @@
     </header>
 
     <main>
-        <section class="Smarte__zone"></section>
+        <section id="content__form_zones">
 
-        <section id="form">
+            <section id="Smarte__zones">
+                <h1>Smarte Zones Editing</h1>
+                <select name="format" class="choose__naam">
 
-            <form   class="form__post"  action="" >
-               <div>
-                    <label for="name">Naam</label>
-                    <input type="text" id="name">
-               </div>
+                    <option selected disabled>please choose an naam</option>
+                    <option value="">Tijn</option>
+                    <option value="">Sarah</option>
+                    <option value="">Manon</option>
+                    <option value="">Ahmed</option>
+                    <option value="">Olivia</option>
+                    <option value="">Karel</option>
+                    <option value="">Wafa</option>
+                    <option value="">Wicher</option>
 
-               <div>
-                    <label for="stad">Stad</label>
-                    <input type="text" id="stad">
-                 </div>
+                </select>
+                <ul class="api__informatie">
+                    <il>Naam:</il>
+                    <il>Stad:</il>
+                    <il>Locatie:</il>
+                    <il>Functie:</il>
+                    <il>TijdStip:</il>
+                    <il>Grootte-plek:</il>
+                    <il>Grbruik(%):</il>
+                    <il>Omschrijving:</il>
+                    <il>Foto:</il>
+                </ul>
 
-                <label for="locatie">Locatie</label>
-                <input type="text" id="locatie">
+            </section>
+             <!-- form section -->
+            <section id="form__container">
+            
+                <h1>Voeg informatie toe</h1>
 
-                <label for="functie">Functie</label>
-                <input type="text" id="Functie">
+                <form   class="form__post"  action="" >
 
-                <label for="tijdstip">TijdStip</label>
-                <input type="number" id="tijdstip">
+                    <div>
 
-                <label for="grootte">Grootte-plek</label>
-                <input type="text" id="grootte">
+                       <label for="name">Naam</label>
+                       <input type="text" id="name">
 
-                <label for="gebruik">Gebruik(%)</label>
-                <input type="text" id="gebruik">
+                    </div>
 
-                <label for="omschrijving">Omschrijving</label>
-                <input type="text" id="omschrijving">
+                    <div>
+                        <label for="stad">Stad</label>
+                        <input type="text" id="stad">
+                    </div>
 
-                <label for="foto">Foto</label>
-                <input type="text" id="foto">
+                    <div>
+                        <label for="locatie">Locatie</label>
+                        <input type="text" id="locatie">
+                    </div>
 
-                <section class="form__button">
-                    <button class="btn__cancel">Cancel</button>
-                    <button class="btn__add" type="submit">add</button>
-                </section>
+                    <div>
+
+                        <label for="functie">Functie</label>
+                        <input type="text" id="Functie">
+                     </div> 
+
+                    <div>
+                        <label for="tijdstip">TijdStip</label>
+                        <input type="number" id="tijdstip">
+                    </div>
+
+                    <div>
+
+                        <label for="grootte">Grootte-plek</label>
+                        <input type="text" id="grootte">
+
+                    </div>
+
+                    <div>
+
+                        <label for="gebruik">Gebruik(%)</label>
+                        <input type="text" id="gebruik">
+                    </div>
+
+                    <div>
+
+                        <label for="omschrijving">Omschrijving</label>
+                        <input type="text" id="omschrijving">
+
+                    </div>
+     
+                    <div>
+
+                        <label for="foto">Foto</label>
+                        <input type="text" id="foto">
+
+                    </div>
+
+                    <section class="form__button">
+                       <button class=" form__button btn--cancel">Cancel</button>
+                       <button class="form__button btn--add" type="submit">Send</button>
+                    </section>
                 
-            </form>
+                 </form>
+
+            </section>
 
         </section>
 

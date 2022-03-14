@@ -1,16 +1,113 @@
-#form{
-    width: 30%;
+#content__form_zones{
+    display: flex;
+    justify-content: space-around;
+}
+/* form */
+#form__container{
+    width: 40%;
     margin: 1em;
+    background-color:#e2d9d5 ;
+}
+#form__container h1{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    padding: .3em;
+    color: white;
+    background-color: rgb(243, 172, 6);
 }
 .form__post{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 95%;
+    margin: .5em;
+}
+
+div{
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
+    width: 100%;
+    padding:.3em;
+}
+
+input{
+    border: none;
+    font-size: 1em;
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 1px #00D7E9;
+}
+input:hover{
+    background-color:#ced6d6 ;
 }
 
 label{
-    display: inline;
+    font-size: 1em;
+    color: black;
+}
+/* form__button */
+.form__button{
+    display: flex;
+    justify-content: space-around;
+    margin: .5em;
+    cursor: pointer;
+}
+.btn--cancel,.btn--add{
+    border: none;
+    padding: .5em;
+    border-radius: 3px;
+    font-size: 1em;
+    color: white;
+    background-color:rgb(243, 172, 6);
+}
+
+.form__button :hover{
+    color: black;
+    transform: translateY(3px);
+    background-color:rgb(145, 109, 25) ;
+}
+/* smarte__zones */
+
+#Smarte__zones{
+    width: 40%;
+    background-color:#5E9C89 ;
+    border-radius: 3px;
+    margin: 1em;
 
 }
-input{
-    display:inline;
-} 
+#Smarte__zones h1{
+    font-size: 1.5em;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    padding: .3em;
+    color:black;
+    background-color:transparent;
+}
+
+.choose__naam{
+    width: 50%;
+    padding:.1em;
+    text-align: center;
+    font-size: .9em;
+    border-radius:3px;
+    margin:1em;
+    box-shadow: 1px 3px 1px rgb(117, 117, 161);
+}
+/* option{
+    margin: 1em;
+    padding: 1em;
+} */
+
+.api__informatie{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:.5em;
+}
+.api__informatie> il{
+    width: 100%;
+    font-size:1.2em;
+    padding:.6em ;
+    color:white;
+}
