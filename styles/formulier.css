@@ -1,0 +1,16 @@
+#form{
+    width: 30%;
+    margin: 1em;
+}
+.form__post{
+    display: flex;
+    flex-direction:column;
+}
+
+label{
+    display: inline;
+
+}
+input{
+    display:inline;
+} 
