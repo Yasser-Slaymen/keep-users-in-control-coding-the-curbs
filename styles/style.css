@@ -67,7 +67,7 @@ header{
 }
 
 .background__img{
-    background-image: url('../assets/car.jpeg');
+    background-image: url("../assets/car.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
