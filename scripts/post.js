@@ -3,10 +3,9 @@ const formPost = document.querySelector('.form__post')
 
 formPost.addEventListener('submit', (post) => {
     post.preventDefault()
-    console.log("hallo")
 
     let data = {
-        smartzonId: document.querySelector('#smartzoneid').value,
+        smartzoneId: document.querySelector('#smartzoneid').value,
         name: document.querySelector('#name').value,
         town: document.querySelector('#stad').value,
         location: document.querySelector('#locatie').value,
