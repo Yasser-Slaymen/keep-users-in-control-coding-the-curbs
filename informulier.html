@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="./styles/formulier.css">
     <script  defer src="./scripts/mobilemenu.js"></script>
     <script  defer src="./scripts/post.js"></script>
-    <title>Document</title>
+    <script  defer src="./scripts/get.js"></script>
+    <script defer src="./scripts/render.js"></script>
+    <script src="./scripts/states.js"></script>
+    <title>Smart zones</title>
 </head>
 <body>
     <header>
@@ -65,6 +68,7 @@
                     <il>Omschrijving:</il>
                     <il>Foto:</il>
                 </ul>
+                <article class="test"></article>
 
             </section>
              <!-- form section -->
@@ -72,7 +76,14 @@
             
                 <h1>Voeg informatie toe</h1>
 
-                <form   class="form__post"  action="" >
+                <form   class="form__post"  action="https://codingthecurbs.api.fdnd.nl/v1/smartzone" method="post" >
+
+                    <div>
+
+                        <label for="smartzoneid">smart zoneID</label>
+                        <input type="text" id="smartzoneid">
+ 
+                     </div>
 
                     <div>
 
