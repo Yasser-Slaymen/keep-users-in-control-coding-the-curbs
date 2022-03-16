@@ -1,4 +1,4 @@
- const BaseUrl = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
+ const BaseUrl = 'https://codingthecurbs.api.fdnd.nl/v1'
 const formPost = document.querySelector('.form__post')
 
 formPost.addEventListener('submit', (post) => {
@@ -18,7 +18,7 @@ formPost.addEventListener('submit', (post) => {
 
     }
 
-    fetch(BaseUrl,{
+    fetch(BaseUrl + `/smartzone`,{
        method:'POST',
        headers:{
            'Content-Type':'application/json'
