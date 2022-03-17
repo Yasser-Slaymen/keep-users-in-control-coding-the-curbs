@@ -21,21 +21,21 @@ function printData(data){
     //  console.log(data.data)
     selecte.innerHTML += `
     <select name="format" class="choose__naam" onchange = "getNm(this.value)">
-    <option selected disabled>please choose an naam</option>
+    <option selected disabled value="sarah">please choose an naam</option>
     ${data.data.map(naam => `<option>${naam.name}</option>` )}
 
    </select>
     `
 }
-
+//  <il>Naam: ${data.data[0].naam.target.value}</il>
 // `${api_base}${name}`
 // chang function
-   async function getNm(name) {
+   async function getNm(naam) {
       const res = await fetch(api_base)
       const data = await res.json()
     // console.log(data.data[2].time)
 
-    content.innerHTML += `
+    content.innerHTML += `  
     <il>Naam: ${data.data[0].name}</il>
     <il>Stad: ${data.data[0].town}</il>
     <il>Locatie: ${data.data[0].location}</il>
