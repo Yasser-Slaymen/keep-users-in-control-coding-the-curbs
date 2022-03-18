@@ -29,10 +29,19 @@ function printData(data){
    </select>
 
     `
+    //  slect bij town
     selecte.innerHTML += `
     <select name="format" class="choose__naam" onchange = "getNm(this.value)">
     <option selected disabled >please choose an city</option>
     ${data.data.map(naam => `<option>${naam.town}</option>`)}
+
+   </select>
+    `
+    //  slect bij id
+    selecte.innerHTML += `
+    <select name="format" class="choose__naam" onchange = "getNm(this.value)">
+    <option selected disabled >please choose an ID</option>
+    ${data.data.map(naam => `<option>${naam.smartzoneId}</option>`)}
 
    </select>
     `
@@ -51,8 +60,8 @@ async function getNm(value) {
         // filter
         //  data.data.filter(naam => naam.name === value)
         //  data.data.filter(naam => naam.town === value)
-       const zoesfilter = data.data.filter(naam => {
-            return naam.name === value || naam.town === value
+       const zonesfilter = data.data.filter(naam => {
+            return naam.name === value || naam.town === value || naam.smartzoneId === value
         })
          .map(naam => {
 
