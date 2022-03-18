@@ -1,7 +1,7 @@
 const api_base = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
 const selecte = document.querySelector('.selecte')
 const content = document.querySelector('.api__informatie')
-let x = ['Tijn', 'Sarah', 'Manon', 'Ahmed', 'Olivia', 'Karel', 'Wafa', 'Wicher']
+let X = ['Tijn', 'Sarah', 'Manon', 'Ahmed', 'Olivia', 'Karel', 'Wafa', 'Wicher']
 const w = ['Wafa']
 
 getData()
@@ -34,14 +34,13 @@ function printData(data){
 
 // `${api_base}${e}`
 
-async function getNm() {
-
+async function getNm(value) {
 
       const res = await fetch(api_base)
       const data = await res.json()
-         console.log(data.data)
+        
         // filter
-         data.data.filter(naam => naam.name)
+         data.data.filter(naam => naam.name === value)
 
          .map(naam => {
 
