@@ -1,8 +1,6 @@
 const api_base = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
 const selecte = document.querySelector('.selecte')
 const content = document.querySelector('.api__informatie')
-let X = ['Tijn', 'Sarah', 'Manon', 'Ahmed', 'Olivia', 'Karel', 'Wafa', 'Wicher']
-const w = ['Wafa']
 
 getData()
 
@@ -21,18 +19,29 @@ async function getData(){
 }
 
 function printData(data){
-   
+
+//    slect bij name
     selecte.innerHTML += `
     <select name="format" class="choose__naam" onchange = "getNm(this.value)">
     <option selected disabled >please choose an naam</option>
     ${data.data.map(naam => `<option>${naam.name}</option>`)}
 
    </select>
+
     `
+    selecte.innerHTML += `
+    <select name="format" class="choose__naam" onchange = "getNm(this.value)">
+    <option selected disabled >please choose an city</option>
+    ${data.data.map(naam => `<option>${naam.town}</option>`)}
+
+   </select>
+    `
+
+
   
 }
 
-// `${api_base}${e}`
+
 
 async function getNm(value) {
 
@@ -40,12 +49,15 @@ async function getNm(value) {
       const data = await res.json()
         
         // filter
-         data.data.filter(naam => naam.name === value)
-
+        //  data.data.filter(naam => naam.name === value)
+        //  data.data.filter(naam => naam.town === value)
+       const zoesfilter = data.data.filter(naam => {
+            return naam.name === value || naam.town === value
+        })
          .map(naam => {
 
     content.innerHTML += ` 
-
+    <il>SmartzoneId: ${naam.smartzoneId}</il>
     <il>Naam: ${naam.name}</il>
     <il>Stad: ${naam.town}</il>
     <il>Locatie: ${naam.location}</il>

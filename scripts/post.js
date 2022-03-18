@@ -28,6 +28,6 @@ formPost.addEventListener('submit', (post) => {
     .then(res => res.json())
     .then(data => renderMember(data))
     .catch(
-        error => console.log('Error')
+        (error) => console.log('Error')
     )
 })
