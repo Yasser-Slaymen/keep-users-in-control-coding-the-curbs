@@ -1,8 +1,8 @@
 const BaseUrl = 'https://codingthecurbs.api.fdnd.nl/v1'
 const formPost = document.querySelector('.form__post')
 
-formPost.addEventListener('submit', (post) => {
-    post.preventDefault()
+formPost.addEventListener('submit', (patch) => {
+    patch.preventDefault()
 
     let data = {
         smartzoneId: document.querySelector('#smartzoneid').value,
@@ -19,7 +19,7 @@ formPost.addEventListener('submit', (post) => {
     }
 
     fetch(BaseUrl + `/smartzone`,{
-       method:'POST',
+       method:'PATCH',
        headers:{
            'Content-Type':'application/json'
        },

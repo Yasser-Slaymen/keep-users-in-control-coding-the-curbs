@@ -60,7 +60,8 @@ async function getNm(value) {
         // filter
         
        const zonesfilter = data.data.filter(naam => {
-            return naam.name === value || naam.town === value || naam.smartzoneId === value
+        
+            return naam.name === value || naam.town === value || naam.smartzoneId == value
         })
          .map(naam => {
 
