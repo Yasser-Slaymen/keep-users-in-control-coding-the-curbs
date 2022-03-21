@@ -1,5 +1,5 @@
-const BaseUrl = 'https://codingthecurbs.api.fdnd.nl/v1'
-const formPost = document.querySelector('.form__post')
+// const BaseUrl = 'https://codingthecurbs.api.fdnd.nl/v1'
+// const formPost = document.querySelector('.form__post')
 
 formPost.addEventListener('submit', (patch) => {
     patch.preventDefault()

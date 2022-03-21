@@ -56,6 +56,11 @@ async function getNm(value) {
 
       const res = await fetch(api_base)
       const data = await res.json()
+
+      // Delete:method
+      function deleteUser(smartzoneId){
+        alert(smartzoneId)
+      }
         
         // filter
         
@@ -78,8 +83,7 @@ async function getNm(value) {
     <il class="conte">Foto: <img src="${naam.image}" alt="" width="300px"
      height="200px">
     </il>
-    <button class="form__button btn--delete" id="edit--post">Edit</button>
-    <button class="form__button btn--delete" id="delete-post">
+    <button class="form__button btn--delete" id="delete-post" onClick ={() => deleteUser({naam.smartzoneId})}
       delete
     </button>
 
