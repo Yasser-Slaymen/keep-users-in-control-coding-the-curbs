@@ -52,7 +52,7 @@ label{
     margin: .5em;
     cursor: pointer;
 }
-.btn--cancel,.btn--add{
+.btn--cancel,.btn--add,.btn--delete{
     border: none;
     padding: .5em;
     border-radius: 3px;
@@ -66,6 +66,13 @@ label{
     transform: translateY(3px);
     background-color:rgb(145, 109, 25) ;
 }
+
+.btn--delete:hover{
+    color: black;
+    transform: translateY(3px);
+    background-color:rgb(145, 109, 25) ;
+}
+
 /* smarte__zones */
 
 #smarte__zones{

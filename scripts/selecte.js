@@ -58,15 +58,14 @@ async function getNm(value) {
       const data = await res.json()
         
         // filter
-        //  data.data.filter(naam => naam.name === value)
-        //  data.data.filter(naam => naam.town === value)
+        
        const zonesfilter = data.data.filter(naam => {
             return naam.name === value || naam.town === value || naam.smartzoneId === value
         })
          .map(naam => {
 
     content.innerHTML += ` 
-    <il>SmartzoneId: ${naam.smartzoneId}</il>
+    <il id>SmartzoneId: ${naam.smartzoneId}</il>
     <il>Naam: ${naam.name}</il>
     <il>Stad: ${naam.town}</il>
     <il>Locatie: ${naam.location}</il>
@@ -77,7 +76,12 @@ async function getNm(value) {
     <il>Omschrijving: ${naam.description}</il>
     <il class="conte">Foto: <img src="${naam.image}" alt="" width="300px"
      height="200px">
-     </il>
+    </il>
+    <button class="form__button btn--delete" id="edit--post">Edit</button>
+    <button class="form__button btn--delete" id="delete-post">
+      delete
+    </button>
+
     ` 
   })
      
