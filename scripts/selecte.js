@@ -1,10 +1,9 @@
 const api_base = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
 const selecte = document.querySelector('.selecte')
-// const content = document.querySelector('.api__informatie')
 const content = document.querySelector('.content')
 
 getData()
-
+// fetch api
 async function getData(){
     
     try{

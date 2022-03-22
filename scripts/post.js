@@ -5,16 +5,16 @@ formPost.addEventListener('submit', (post) => {
     post.preventDefault()
 
     let data = {
-        smartzoneId: document.querySelector('#smartzoneid').value,
-        name: document.querySelector('#name').value,
-        town: document.querySelector('#stad').value,
-        location: document.querySelector('#locatie').value,
-        function: document.querySelector('#functie').value,
-        time: document.querySelector('#tijdstip').value,
-        size: document.querySelector('#grootte').value,
-        utilization: document.querySelector('#gebruik').value,
-        description: document.querySelector('#omschrijving').value,
-        image: document.querySelector('#foto').value,
+        smartzoneId: document.querySelector('#smartzoneid-y').value,
+        name: document.querySelector('#name-y').value,
+        town: document.querySelector('#stad-y').value,
+        location: document.querySelector('#locatie-y').value,
+        function: document.querySelector('#functie-y').value,
+        time: document.querySelector('#tijdstip-y').value,
+        size: document.querySelector('#grootte-y').value,
+        utilization: document.querySelector('#gebruik-y').value,
+        description: document.querySelector('#omschrijving-y').value,
+        image: document.querySelector('#foto-y').value,
 
     }
 
@@ -30,4 +30,7 @@ formPost.addEventListener('submit', (post) => {
     .catch(
         (error) => console.log('Error')
     )
+    // reset input feild to empty state
+    
+     
 })

@@ -1,12 +1,11 @@
+
 // Delete-method
 content.addEventListener('click', (e) => {
+
     e.preventDefault()
-   
-   
     let delBtuttonIsPressed = e.target.id == 'delete-post';
     // let editBtuttonIsPressed = e.target.id == 'edit-post';
- 
-     let id = e.target.parentElement.dataset.id;
+    let id = e.target.parentElement.dataset.id;
 
   //    method: Delete
  
@@ -19,6 +18,6 @@ content.addEventListener('click', (e) => {
     .then(() => location.reload())
 
  }
-
+ 
  })
- // end- delete method
+ 

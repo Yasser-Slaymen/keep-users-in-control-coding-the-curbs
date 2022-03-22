@@ -1,17 +1,25 @@
-const smartzoner = document.querySelector('#smartzoneid')
-const naamr = document.querySelector('#name')
-const stadr = document.querySelector('#stad')
-const locatier = document.querySelector('#locatie')
-const functier = document.querySelector('#functie')
-const timer = document.querySelector('#tijdstip')
-const sizer = document.querySelector('#grootte')
-const utilization = document.querySelector('#gebruik')
-const description = document.querySelector('#omschrijving')
-const imager = document.querySelector('#foto')
+// api link
+const api_Base = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
+
+const smartzoner = document.querySelector('#smartzoneid-y')
+const naamr = document.querySelector('#name-y')
+const stadr = document.querySelector('#stad-y')
+const locatier = document.querySelector('#locatie-y')
+const functier = document.querySelector('#functie-y')
+const timer = document.querySelector('#tijdstip-y')
+const sizer = document.querySelector('#grootte-y')
+const utilization = document.querySelector('#gebruik-y')
+const description = document.querySelector('#omschrijving-y')
+const imager = document.querySelector('#foto-y')
+
+// btn 
 const submitBtn = document.querySelector('.btn--add')
+
+// 
 
 content.addEventListener('click', (e) =>{
    e.preventDefault()
+
     let editBtuttonIsPressed = e.target.id == 'edit-post';
     let id = e.target.parentElement.dataset.id;
 
@@ -28,9 +36,8 @@ content.addEventListener('click', (e) =>{
         let gebruikr = parent.querySelector('.gebruik').textContent
         let omschrijven = parent.querySelector('.omschrijven').textContent
         let image = parent.querySelector('.image').textContent
-        
-    
-    
+
+        // put content in input veild
         smartzoner.value = smartzoneid
         naamr.value = name
         stadr.value = town
@@ -41,52 +48,39 @@ content.addEventListener('click', (e) =>{
         description.value = omschrijven
         utilization.vlaue = gebruikr
         imager.value = image
-      
- 
+
     }
 
-    // maken data let
-    // let data = {
-    //     smartzoneId: smartzoner.value,
-    //     name: naamr.value,
-    //     town:stadr.value ,
-    //     location:locatier.value ,
-    //     function:functier.value ,
-    //     time:timer.value,
-    //     size:sizer.value,
-    //     utilization: utilization.vlaue,
-    //     description:description.value,
-    //     image:imager.value,
-
-    // }
-    // update post
-    // method: Patch
-
+    //  update the existing post 
+    // method:PATCH
+    
     submitBtn.addEventListener('click', (e) =>{
         e.preventDefault()
 
-        fetch(`${api_base}/${id}`,{
+        fetch(`${api_Base}/${id}`,{
                  method:'PATCH',
                  headers:{
                        'Content-Type':'application/json'
                     },
 
                 body:JSON.stringify({
-       
-        town:stadr.value ,
-        location:locatier.value ,
-        function:functier.value ,
-        time:timer.value,
-        size:sizer.value,
-        utilization: utilization.vlaue,
-        description:description.value,
-       
 
+                    smartzoneId: smartzoner.value,
+                    name: naamr.value,
+                    town:stadr.value ,
+                    location:locatier.value ,
+                    function:functier.value ,
+                    time:timer.value,
+                    size:sizer.value,
+                    utilization: utilization.vlaue,
+                    description:description.value,
+                    image:imager.value,
+       
                 })
 
         })
         .then(res => res.json())
-        .then(data => renderMember(data))
+        .then(() => loction.reload)
         
     })
 
@@ -98,38 +92,3 @@ content.addEventListener('click', (e) =>{
 
 
 
-// formPost.addEventListener('submit', (patch) => {
-//     patch.preventDefault()
-
-    
-
-    // }
-
-     // let data = {
-    //     smartzoneId: document.querySelector('#smartzoneid').value,
-    //     name: document.querySelector('#name').value,
-    //     town: document.querySelector('#stad').value,
-    //     location: document.querySelector('#locatie').value,
-    //     function: document.querySelector('#functie').value,
-    //     time: document.querySelector('#tijdstip').value,
-    //     size: document.querySelector('#grootte').value,
-    //     utilization: document.querySelector('#gebruik').value,
-    //     description: document.querySelector('#omschrijving').value,
-    //     image: document.querySelector('#foto').value,
-
-    // }
-
-
-//     fetch(BaseUrl + `/smartzone`,{
-//        method:'PATCH',
-//        headers:{
-//            'Content-Type':'application/json'
-//        },
-//        body:JSON.stringify(data),
-//     })
-//     .then(res => res.json())
-//     .then(data => renderMember(data))
-//     .catch(
-//         (error) => console.log('Error')
-//     )
-// })
