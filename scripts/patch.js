@@ -13,6 +13,7 @@ const submitBtn = document.querySelector('.btn--add')
 content.addEventListener('click', (e) =>{
    e.preventDefault()
     let editBtuttonIsPressed = e.target.id == 'edit-post';
+    let id = e.target.parentElement.dataset.id;
 
     if(editBtuttonIsPressed){
         
@@ -28,7 +29,9 @@ content.addEventListener('click', (e) =>{
         let omschrijven = parent.querySelector('.omschrijven').textContent
         let image = parent.querySelector('.image').textContent
         
-        smartzoner.value= smartzoneid
+    
+    
+        smartzoner.value = smartzoneid
         naamr.value = name
         stadr.value = town
         locatier.value = loction
@@ -38,15 +41,53 @@ content.addEventListener('click', (e) =>{
         description.value = omschrijven
         utilization.vlaue = gebruikr
         imager.value = image
+      
  
     }
 
+    // maken data let
+    // let data = {
+    //     smartzoneId: smartzoner.value,
+    //     name: naamr.value,
+    //     town:stadr.value ,
+    //     location:locatier.value ,
+    //     function:functier.value ,
+    //     time:timer.value,
+    //     size:sizer.value,
+    //     utilization: utilization.vlaue,
+    //     description:description.value,
+    //     image:imager.value,
 
+    // }
     // update post
-    // method: fetch
+    // method: Patch
 
-    submitBtn.addEventListener('click',() =>{
-        console.log('post updated')
+    submitBtn.addEventListener('click', (e) =>{
+        e.preventDefault()
+
+        fetch(`${api_base}/${id}`,{
+                 method:'PATCH',
+                 headers:{
+                       'Content-Type':'application/json'
+                    },
+
+                body:JSON.stringify({
+       
+        town:stadr.value ,
+        location:locatier.value ,
+        function:functier.value ,
+        time:timer.value,
+        size:sizer.value,
+        utilization: utilization.vlaue,
+        description:description.value,
+       
+
+                })
+
+        })
+        .then(res => res.json())
+        .then(data => renderMember(data))
+        
     })
 
 
@@ -60,7 +101,11 @@ content.addEventListener('click', (e) =>{
 // formPost.addEventListener('submit', (patch) => {
 //     patch.preventDefault()
 
-    // let data = {
+    
+
+    // }
+
+     // let data = {
     //     smartzoneId: document.querySelector('#smartzoneid').value,
     //     name: document.querySelector('#name').value,
     //     town: document.querySelector('#stad').value,
@@ -73,6 +118,7 @@ content.addEventListener('click', (e) =>{
     //     image: document.querySelector('#foto').value,
 
     // }
+
 
 //     fetch(BaseUrl + `/smartzone`,{
 //        method:'PATCH',

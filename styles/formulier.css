@@ -52,7 +52,7 @@ label{
     margin: .5em;
     cursor: pointer;
 }
-.btn--cancel,.btn--add,.btn--delete{
+.btn--cancel,.btn--add,.btn--delete, .btn--edit{
     border: none;
     padding: .5em;
     border-radius: 3px;

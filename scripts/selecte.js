@@ -85,7 +85,7 @@ async function getNm(value) {
     </il>
 
      <a href="#"  class="form__button btn--delete" id="delete-post">delete</a>
-     <a href="#"  class="form__button btn--delete" id="edit-post">Edite</a>
+     <a href="#"  class="form__button btn--edit" id="edit-post">Edite</a>
 
    </ul>
     
