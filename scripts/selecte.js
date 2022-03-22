@@ -1,6 +1,7 @@
 const api_base = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
 const selecte = document.querySelector('.selecte')
-const content = document.querySelector('.api__informatie')
+// const content = document.querySelector('.api__informatie')
+const content = document.querySelector('.content')
 
 getData()
 
@@ -57,10 +58,8 @@ async function getNm(value) {
       const res = await fetch(api_base)
       const data = await res.json()
 
-      // Delete:method
-      function deleteUser(smartzoneId){
-        alert(smartzoneId)
-      }
+      
+      
         
         // filter
         
@@ -71,21 +70,25 @@ async function getNm(value) {
          .map(naam => {
 
     content.innerHTML += ` 
-    <il id>SmartzoneId: ${naam.smartzoneId}</il>
-    <il>Naam: ${naam.name}</il>
-    <il>Stad: ${naam.town}</il>
-    <il>Locatie: ${naam.location}</il>
-    <il>Functie: ${naam.function}</il>
-    <il>TijdStip: ${naam.time}</il>
-    <il>Grootte-plek: ${naam.size}</il>
-    <il>Grbruik(%): ${naam.utilization}</il>
-    <il>Omschrijving: ${naam.description}</il>
-    <il class="conte">Foto: <img src="${naam.image}" alt="" width="300px"
-     height="200px">
+    <ul class="api__informatie" data-id= ${naam.smartzoneId}>
+    <il class="smart-zone">SmartzoneId: ${naam.smartzoneId}</il>
+    <il class="name">Naam: ${naam.name}</il>
+    <il class="town">Stad: ${naam.town}</il>
+    <il class="loction">Locatie: ${naam.location}</il>
+    <il class="functie">Functie: ${naam.function}</il>
+    <il class="time">TijdStip: ${naam.time}</il>
+    <il class="size">Grootte-plek: ${naam.size}</il>
+    <il class="gebruik">Grbruik(%): ${naam.utilization}</il>
+    <il class="omschrijven">Omschrijving: ${naam.description}</il>
+    <il class="image"><img src="${naam.image}" alt="" width="300px"
+        height="200px">
     </il>
-    <button class="form__button btn--delete" id="delete-post" onClick ={() => deleteUser({naam.smartzoneId})}
-      delete
-    </button>
+
+     <a href="#"  class="form__button btn--delete" id="delete-post">delete</a>
+     <a href="#"  class="form__button btn--delete" id="edit-post">Edite</a>
+
+   </ul>
+    
 
     ` 
   })
