@@ -16,67 +16,9 @@
   --background-blue: 17, 15, 42;
   --selection: #84389e;
 }
-/* loding state */
 
-.spinner-wrapper{
-    width: 100%;
-    height: 100%;
-    background-color: #151515;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.loding_spinner{ 
-    width: 5em;
-    height: 5em;
-    margin: 0 auto;
-    margin-top:5em;
-    border:.3em solid #ddd;
-    border-radius: 50%;
-    border-top-color:rgb(0, 225, 255);
-    border-bottom-color: rgb(255, 115, 0);
-    animation:loding 1s linear infinite;
-    
-    
-}
-
-@keyframes loding{
-    100%{
-        transform: rotate(360deg);
-    
-    }
-}
-/* Empty-States */
-.EmptyStates{
-    
-    display:grid;
-    place-items: center;
-    width:96vw;
-    height:100vh;
-    background-color: #000;
-    z-index: 999999999999999;
-    
-    
-}
-.EmptyStates> img{
-   
-    
-    width: 30em;
-    height:30em;
-    
-  
-
-}
-.EmptyStates-none{
-    display: none;
-}
 body{
-   max-width: 1350px;
+    max-width: 1350px;
     border: 1em solid blue;
     margin: 0 auto;
     padding: 0;
@@ -84,6 +26,7 @@ body{
     font-family:Rajdhani;
 
 }
+
 
 /* header */
 header{
@@ -520,4 +463,68 @@ footer{
       margin: 0 auto;
        text-align: center;
    }
+}
+/* states ui */
+
+/* loding state */
+
+.spinner-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loding_spinner{ 
+    width: 5em;
+    height: 5em;
+    margin: 0 auto;
+    margin-top:5em;
+    border:.3em solid #ddd;
+    border-radius: 50%;
+    border-top-color:rgb(0, 225, 255);
+    border-bottom-color: rgb(255, 115, 0);
+    animation:loding 1s linear infinite;
+    
+    
+}
+
+@keyframes loding{
+    100%{
+        transform: rotate(360deg);
+    
+    }
+}
+/* Empty-States */
+.EmptyStates{
+    display:grid;
+    place-items: center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width:100vw;
+    height:100vh;
+    background-color: #000;
+    z-index: 999999999999999;
+    
+    
+}
+.EmptyStates> img{
+   
+    
+    width: 30em;
+    height:30em;
+    
+  
+
+}
+.EmptyStates-none{
+    display: none;
 }
