@@ -25,23 +25,23 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 9999999999;
+    z-index: 99999;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .loding_spinner{ 
-    width: 3em;
-    height: 3em;
+    width: 5em;
+    height: 5em;
     margin: 0 auto;
     margin-top:5em;
     border:.3em solid #ddd;
     border-radius: 50%;
     border-top-color:rgb(0, 225, 255);
     border-bottom-color: rgb(255, 115, 0);
-   
     animation:loding 1s linear infinite;
+    
     
 }
 
@@ -51,6 +51,30 @@
     
     }
 }
+/* Empty-States */
+.EmptyStates{
+    
+    display:grid;
+    place-items: center;
+    width:96vw;
+    height:100vh;
+    background-color: #000;
+    z-index: 999999999999999;
+    
+    
+}
+.EmptyStates> img{
+   
+    
+    width: 30em;
+    height:30em;
+    
+  
+
+}
+.EmptyStates-none{
+    display: none;
+}
 body{
    max-width: 1350px;
     border: 1em solid blue;
@@ -58,6 +82,7 @@ body{
     padding: 0;
     background-color: #FDF6FF;
     font-family:Rajdhani;
+
 }
 
 /* header */

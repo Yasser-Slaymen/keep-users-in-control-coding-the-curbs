@@ -14,6 +14,7 @@ async function getData(){
 
     }catch(err){
         console.log("Error:" , err.message)
+        alert('oops Erorr,iets loopt fout')
 
     }
 }

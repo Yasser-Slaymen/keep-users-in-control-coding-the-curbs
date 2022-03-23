@@ -27,10 +27,8 @@ formPost.addEventListener('submit', (post) => {
     })
     .then(res => res.json())
     .then(data => renderMember(data))
-    .catch(
-        (error) => console.log('Error')
-    )
-    // reset input feild to empty state
+    .catch( (error) =>console.log('Error'))
+   
     
      
 })

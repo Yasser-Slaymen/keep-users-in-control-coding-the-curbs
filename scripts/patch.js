@@ -38,7 +38,7 @@ content.addEventListener('click', (e) =>{
         let image = parent.querySelector('.image').textContent
 
         // put content in input veild
-        smartzoner.value = smartzoneid
+        smartzoner.value = smartzoneid.replace(/\D/gm, '')
         naamr.value = name
         stadr.value = town
         locatier.value = loction
@@ -56,6 +56,7 @@ content.addEventListener('click', (e) =>{
     
     submitBtn.addEventListener('click', (e) =>{
         e.preventDefault()
+        console.log(e)
 
         fetch(`${api_Base}/${id}`,{
                  method:'PATCH',
