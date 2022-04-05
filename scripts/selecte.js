@@ -54,7 +54,7 @@ function printData(data){
 
 
 async function getNm(value) {
-
+console.log(value)
       const res = await fetch(api_base)
       const data = await res.json()
 
