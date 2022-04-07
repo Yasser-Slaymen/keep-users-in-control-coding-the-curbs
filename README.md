@@ -6,7 +6,7 @@
  📸
 ![Screenshot (217)](https://user-images.githubusercontent.com/90189815/158881928-0f4bdd64-1e5b-4df9-80f8-469b729f09df.png)
 
-<!-- Voeg een link toe naar Github Pages 🌐-->
+ 🌐 https://yasser-slaymen.github.io/keep-users-in-control-coding-the-curbs/
 
 ## Kenmerken
 * 🤖 HTML
