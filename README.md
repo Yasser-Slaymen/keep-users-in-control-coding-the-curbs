@@ -13,7 +13,8 @@
 * 🤖 CSS
 * 🤖  JavaScript
 ## Installatie
-
+* clone repo
+https://github.com/Yasser-Slaymen/keep-users-in-control-coding-the-curbs.wiki.git
 ## Gebruik
 
 ## Bronnen
