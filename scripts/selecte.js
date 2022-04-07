@@ -21,7 +21,7 @@ async function getData(){
 
 function printData(data){
 
-//    slect bij name
+ //    slect bij name
     selecte.innerHTML += `
     <select name="format" class="choose__naam" onchange = "getNm(this.value)">
     <option selected disabled >please choose an naam</option>
@@ -34,7 +34,10 @@ function printData(data){
     selecte.innerHTML += `
     <select name="format" class="choose__naam" onchange = "getNm(this.value)">
     <option selected disabled >please choose an city</option>
-    ${data.data.map(naam => `<option>${naam.town}</option>`)}
+    <option>Amsterdam</option>
+    <option>Rotterdam</option>
+    <option>Schiedam</option>
+    <option>Utrecht</option>
 
    </select>
     `
@@ -42,7 +45,14 @@ function printData(data){
     selecte.innerHTML += `
     <select name="format" class="choose__naam" onchange = "getNm(this.value)">
     <option selected disabled >please choose an ID</option>
-    ${data.data.map(naam => `<option>${naam.smartzoneId}</option>`)}
+    <option>16</option>
+    <option>17</option>
+    <option>155</option>
+    <option>174</option>
+    <option>175</option>
+    <option>177</option>
+    <option>178</option>
+    <option>187</option>
 
    </select>
     `

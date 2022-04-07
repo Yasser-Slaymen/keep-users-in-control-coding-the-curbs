@@ -59,7 +59,7 @@ content.addEventListener('click', (e) =>{
         console.log(e)
 
         fetch(`${api_Base}/${id}`,{
-                 method:'PATCH',
+                 method:'PUT',
                  headers:{
                        'Content-Type':'application/json'
                     },
